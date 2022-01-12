@@ -6,7 +6,7 @@ For some (such as survival) servers, they hope that players without a white list
 - Players without a license(permission) will be in adventure mode
 - *Player can't pick up and join portal* **NOW**
 - Send information to players when they join
- - If you want, players will not find all traces of FormLicense in the game.(More fully display your brand)
+- - If you want, players will not find all traces of FormLicense in the game.(More fully display your brand)
 - Plugin functions are constantly update and open-source
 - If you want to prevent unlicensed players from doing anything, you can request it on the issue page.
 
