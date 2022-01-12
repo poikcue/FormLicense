@@ -1,11 +1,16 @@
 # FormLicense by poikcue.
 # Active Version: 1.13-1.18.1
 # Report bug: Send mail to poikcue@outlook.com
-# Version:1.3
+# Version:1.3-BETA-4
 # WARN: YOU ARE USING BETA VERSION! PLEASE BACK UP!
 FormLicense:
-  version: 1.3-beta-3
-  onEnableMessage: Powered by poikcue.
+  HideDevelopmentVersionWarning: false
+  # FormLicense development version warning
+  # When you download it on the build page jar file or compile by yourself if 'dont use' is marked on the commit page, please do not use it mmediately.
+  # This means that the version is untested or (possibly) still have bug.
+  # If you modify the plugin and test it yourself, there should be no problem.
+  # If you have any problems with the development version, please submit an issue in GitHub and stop using it immediately. The developer will not bear * any * responsibility for this.
+  # If you want to hide this information, set config.yml 'formlicense 'developmentversion' to false
 PlayerNoLicenseAllow:
   pickup: true
   UsePortal: true
@@ -16,6 +21,9 @@ Message:
     I'm sorry,
     You don't have server LICENSE.
     Please type &a"/license" &fto check your all active license.
+    
 
   command-with-license: Badly,you don't have license!
   command-with-no-license: Oh yeah! You have license!
+  reload-with-permission: Successful reload!
+  reload-with-no-permission: You can't do this!

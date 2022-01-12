@@ -1,9 +1,9 @@
 package poikcue.form.license;
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import poikcue.form.license.command.command;
 import poikcue.form.license.nolicense.ChangeWorld;
 import poikcue.form.license.nolicense.pickUp;
 
@@ -19,12 +19,22 @@ public class FormLicense extends JavaPlugin {
         pm.registerEvents(new PlayerJoinEvent(), this);
         pm.registerEvents(new ChangeWorld(), this);
         saveDefaultConfig();
-        FileConfiguration config = getConfig();
         if (Bukkit.getPluginCommand("license") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("license")).setExecutor(new command());
         }
-        getLogger().info("Welcome to use FormLicense! Loaded version:" + config.getString("FormLicense.version"));
-        getLogger().info("FormLicense.onEnableMessage");
+        if(!getConfig().getBoolean("FormLicense.HideDevelopmentVersionWarning")){
+            getLogger().warning("-- FormLicense Development Version Warning --");
+            getLogger().warning("When you download it on the build page jar file or compile by yourself if 'dont use' is marked on the commit page, please do not use it mmediately.");
+            getLogger().warning("This means that the version is untested or possibly still have bug.");
+            getLogger().warning("If you modify the plugin and test it yourself, there should be no problem.");
+            getLogger().warning("If you have any problems with the development version, please submit an issue in GitHub and stop using it immediately. The developer will not bear * any * responsibility for this.");
+            getLogger().warning("If you want to hide this information, set config.yml 'FormLicense.HideDevelopmentVersionWarning' to false");
+            getLogger().warning("---------------------------------------------");
+        }
+        else{
+            getLogger().info("You are already in config.yml disables the development version prompt.");
+            getLogger().info("This message is a reminder that you are using the dev version.");
+        }
     }
 
     public static FormLicense getInstance(){

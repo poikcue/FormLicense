@@ -1,8 +1,9 @@
-package poikcue.form.license;
+package poikcue.form.license.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import poikcue.form.license.FormLicense;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Objects;

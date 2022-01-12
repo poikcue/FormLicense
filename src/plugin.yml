@@ -9,3 +9,9 @@ commands:
       - "licenses"
     usage: "/license"
     description: "Allow player to check them license status on poikcue's smp server."
+  licensereload:
+    aliases:
+      - "licreload"
+      - "reloadlicense"
+    usage: "/licensereload"
+    description: "Allow people to reload license system"
