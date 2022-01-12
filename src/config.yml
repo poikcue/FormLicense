@@ -2,8 +2,9 @@
 # Active Version: 1.13-1.18.1
 # Report bug: Send mail to poikcue@outlook.com
 # Version:1.3
+# WARN: YOU ARE USING BETA VERSION! PLEASE BACK UP!
 FormLicense:
-  version: 1.3-beta-2
+  version: 1.3-beta-3
   onEnableMessage: Powered by poikcue.
 PlayerNoLicenseAllow:
   pickup: true
