@@ -1,7 +1,7 @@
 # FormLicense by poikcue.
 # Active Version: 1.13-1.18.1
-# Report bug: Send mail to poikcue@outlook.com
-# Version:1.3-DEV-1
+# Report bug: Submit an issue at github.com/poikcue/FormLicense
+# Version:1.4-beta-1
 # WARN: YOU ARE USING BETA VERSION! PLEASE BACK UP!
 FormLicense:
   HideDevelopmentVersionWarning: false
@@ -14,14 +14,10 @@ FormLicense:
 PlayerNoLicenseAllow:
   pickup: true
   UsePortal: true
+  hit-others: true
 Message:
   action-bar-message: "I'm sorry but you don't have license.Please type &a/license &fto check."
-  no-license-player-join-message: |-
-    
-    I'm sorry,
-    You don't have server LICENSE.
-    Please type &a"/license" &fto check your all active license.
-
+  no-license-player-join-message: "You don't have license.Some function locked."
   command-with-license: "You don't have license!"
   command-with-no-license: "You have license!"
   reload-with-permission: "Successful reload!"

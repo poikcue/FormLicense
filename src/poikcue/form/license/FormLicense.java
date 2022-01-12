@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import poikcue.form.license.command.command;
 import poikcue.form.license.command.reload;
 import poikcue.form.license.nolicense.ChangeWorld;
+import poikcue.form.license.nolicense.DamageOthers;
 import poikcue.form.license.nolicense.pickUp;
 
 import java.util.Objects;
@@ -19,6 +20,7 @@ public class FormLicense extends JavaPlugin {
         pm.registerEvents(new pickUp(), this);
         pm.registerEvents(new PlayerJoinEvent(), this);
         pm.registerEvents(new ChangeWorld(), this);
+        pm.registerEvents(new DamageOthers(), this);
         saveDefaultConfig();
         if (Bukkit.getPluginCommand("license") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("license")).setExecutor(new command());
@@ -39,6 +41,7 @@ public class FormLicense extends JavaPlugin {
             getLogger().info("You are already in config.yml disables the development version prompt.");
             getLogger().info("This message is a reminder that you are using the development version.");
         }
+
     }
 
     public static FormLicense getInstance(){

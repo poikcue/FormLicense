@@ -1,6 +1,6 @@
 name: FormLicense
 main: poikcue.form.license.FormLicense
-version: 1.3-DEV-1
+version: 1.4-beta-1
 api-version: 1.13
 commands:
   license:
@@ -8,7 +8,7 @@ commands:
       - "lic"
       - "licenses"
     usage: "/license"
-    description: "Allow player to check them license status on poikcue's smp server."
+    description: "Allow player to check them license."
   licensereload:
     aliases:
       - "licreload"
