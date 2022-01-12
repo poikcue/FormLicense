@@ -15,14 +15,14 @@ PlayerNoLicenseAllow:
   pickup: true
   UsePortal: true
 Message:
-  action-bar-message: I'm sorry but you don't have license.Please type "/license" to check.
+  action-bar-message: "I'm sorry but you don't have license.Please type &a/license &fto check."
   no-license-player-join-message: |-
     
     I'm sorry,
     You don't have server LICENSE.
     Please type &a"/license" &fto check your all active license.
 
-  command-with-license: &c You don't have license!
-  command-with-no-license: &a Oh yeah! You have license!
-  reload-with-permission: &e Successful reload!
-  reload-with-no-permission: &c You can't do this!
+  command-with-license: "&cYou don't have license!"
+  command-with-no-license: "&aOh yeah! You have license!"
+  reload-with-permission: "&eSuccessful reload!"
+  reload-with-no-permission: "&c You can't do this!"

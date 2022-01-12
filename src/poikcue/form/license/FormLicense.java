@@ -28,7 +28,7 @@ public class FormLicense extends JavaPlugin {
         }
         if(!getConfig().getBoolean("FormLicense.HideDevelopmentVersionWarning")){
             getLogger().warning("-- FormLicense Development Version Warning --");
-            getLogger().warning("When you download it on the build page jar file or compile by yourself if 'dont use' is marked on the commit page, please do not use it mmediately.");
+            getLogger().warning("This version is alpha,beta or development version.* NOT A OFFICIAL VERSION! *");
             getLogger().warning("This means that the version is untested or possibly still have bug.");
             getLogger().warning("If you modify the plugin and test it yourself, there should be no problem.");
             getLogger().warning("If you have any problems with the development version, please submit an issue in GitHub and stop using it immediately. The developer will not bear * any * responsibility for this.");
@@ -37,7 +37,7 @@ public class FormLicense extends JavaPlugin {
         }
         else{
             getLogger().info("You are already in config.yml disables the development version prompt.");
-            getLogger().info("This message is a reminder that you are using the dev version.");
+            getLogger().info("This message is a reminder that you are using the development version.");
         }
     }
 
