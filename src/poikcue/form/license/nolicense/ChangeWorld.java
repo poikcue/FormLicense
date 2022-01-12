@@ -8,8 +8,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerPortalEvent;
 import poikcue.form.license.FormLicense;
 
-import java.util.Objects;
-
 import static net.md_5.bungee.api.ChatColor.translateAlternateColorCodes;
 
 public class ChangeWorld implements Listener {
@@ -23,13 +21,9 @@ public class ChangeWorld implements Listener {
             }
             else {
                 e.setCancelled(true);
-                TextComponent messageaction;
-                messageaction = new TextComponent(FormLicense.getInstance().getConfig().getString("Message.action-bar-message"));
-                p.spigot().sendMessage(ChatMessageType.ACTION_BAR, messageaction);
-                String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.action-bar-message");
-                assert nonColoredText != null;
-                String coloredText = translateAlternateColorCodes('&', nonColoredText);
-                p.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString(coloredText)));
+                TextComponent messageaction = new TextComponent(FormLicense.getInstance().getConfig().getString("Message.action-bar-message"));
+                String coloredText = translateAlternateColorCodes('&', String.valueOf(messageaction));
+                p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(coloredText));
             }
         }
     }

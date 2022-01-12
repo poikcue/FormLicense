@@ -16,14 +16,12 @@ public class command implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
         if (!commandSender.hasPermission("license.full")) {
             String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.command-with-license");
-            assert nonColoredText != null;
             String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString(coloredText)));
+            commandSender.sendMessage(coloredText);
         } else {
             String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.command-with-no-license");
-            assert nonColoredText != null;
             String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString(coloredText)));
+            commandSender.sendMessage(coloredText);
         }
         return true;
     }

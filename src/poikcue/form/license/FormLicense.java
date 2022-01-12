@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import poikcue.form.license.command.command;
+import poikcue.form.license.command.reload;
 import poikcue.form.license.nolicense.ChangeWorld;
 import poikcue.form.license.nolicense.pickUp;
 
@@ -21,6 +22,9 @@ public class FormLicense extends JavaPlugin {
         saveDefaultConfig();
         if (Bukkit.getPluginCommand("license") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("license")).setExecutor(new command());
+        }
+        if (Bukkit.getPluginCommand("licensereload") != null) {
+            Objects.requireNonNull(Bukkit.getPluginCommand("licensereload")).setExecutor(new reload());
         }
         if(!getConfig().getBoolean("FormLicense.HideDevelopmentVersionWarning")){
             getLogger().warning("-- FormLicense Development Version Warning --");

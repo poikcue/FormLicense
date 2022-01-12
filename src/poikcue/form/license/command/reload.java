@@ -19,14 +19,14 @@ public class reload implements CommandExecutor {
             String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.reload-with-permission");
             assert nonColoredText != null;
             String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString(coloredText)));
+            commandSender.sendMessage(Objects.requireNonNull(coloredText));
         }
         else{
             String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.reload-with-no-permission");
             assert nonColoredText != null;
             String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString(coloredText)));
+            commandSender.sendMessage(Objects.requireNonNull(coloredText));
         }
-        return false;
+        return true;
     }
 }

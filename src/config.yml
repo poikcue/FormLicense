@@ -1,7 +1,7 @@
 # FormLicense by poikcue.
 # Active Version: 1.13-1.18.1
 # Report bug: Send mail to poikcue@outlook.com
-# Version:1.3-BETA-4
+# Version:1.3-BETA-5
 # WARN: YOU ARE USING BETA VERSION! PLEASE BACK UP!
 FormLicense:
   HideDevelopmentVersionWarning: false
@@ -21,9 +21,8 @@ Message:
     I'm sorry,
     You don't have server LICENSE.
     Please type &a"/license" &fto check your all active license.
-    
 
-  command-with-license: Badly,you don't have license!
-  command-with-no-license: Oh yeah! You have license!
-  reload-with-permission: Successful reload!
-  reload-with-no-permission: You can't do this!
+  command-with-license: &cYou don't have license!
+  command-with-no-license: &aOh yeah! You have license!
+  reload-with-permission: &eSuccessful reload!
+  reload-with-no-permission: &cYou can't do this!

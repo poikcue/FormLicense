@@ -20,9 +20,8 @@ public class PlayerJoinEvent implements Listener {
             p.setGameMode(GameMode.ADVENTURE);
             p.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString("Message.no-license-player-join-message")));
             String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.no-license-player-join-message");
-            assert nonColoredText != null;
             String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            p.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString(coloredText)));
+            p.sendMessage(FormLicense.getInstance().getConfig().getString(coloredText));
         }
         return false;
     }
