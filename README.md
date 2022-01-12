@@ -1,5 +1,5 @@
 # FormLicense
-For some (such as survival) servers, they hope that players without a white list can enjoy some unique content (such as beauty or features) of the server. If you are a server owner, you can choose formlicense to do this.
+For some (such as survival) servers, they hope that players without a white list can enjoy some unique content (such as sightseeing or features) of the server. If you are a server owner, you can choose formlicense to do this.
 ## Feature
 - Simple and lightweight enough
 - Most (existing functions) can be customized
