@@ -9,14 +9,16 @@ import poikcue.form.license.FormLicense;
 public class target implements Listener {
 
     @EventHandler
-    public void onChange(EntityTargetEvent e) {
-        Player p = (Player) e.getTarget();
+    public void onETE(EntityTargetEvent e) {
         if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.target")){
-            if (p.hasPermission("license.full")){
-                e.setCancelled(false);
-            }
-            else {
-                e.setCancelled(true);
+            if(e.getTarget() instanceof Player){
+                Player p = (Player) e.getTarget();
+                if (p.hasPermission("license.full")){
+                    e.setCancelled(false);
+                }
+                else {
+                    e.setCancelled(true);
+                }
             }
         }
     }

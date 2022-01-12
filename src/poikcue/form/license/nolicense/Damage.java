@@ -15,14 +15,14 @@ public class Damage implements Listener {
 
     @EventHandler
     public void onDamaged(EntityDamageEvent e) {
-        if (FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit")) {
-            if (e.getEntityType() == EntityType.PLAYER) {
+        if (FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit.hit")) {
+            if (e.getEntity() instanceof Player) {
                 Player p = (Player) e.getEntity();
                 if (p.hasPermission("license.full")) {
                     e.setCancelled(false);
                 } else {
                     e.setCancelled(true);
-                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.hit-action-bar-message"))));
+                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.hit-message.hit-action-bar-message"))));
                 }
             }
         }

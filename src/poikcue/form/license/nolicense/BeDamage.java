@@ -15,15 +15,15 @@ public class BeDamage implements Listener {
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {
-        if(e.getEntityType() == EntityType.PLAYER) {
+        if(e.getEntity() instanceof Player) {
             Player p = (Player) e.getEntity();
-            if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit")){
+            if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit.be-hit")){
                 if (p.hasPermission("license.full")){
                     e.setCancelled(false);
                 }
                 else {
                     e.setCancelled(true);
-                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.hit-action-bar-message"))));
+                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.hit-message.be-hit-action-bar-message"))));
                 }
             }
         }
