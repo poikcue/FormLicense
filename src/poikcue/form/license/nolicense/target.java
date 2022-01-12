@@ -11,7 +11,7 @@ public class target implements Listener {
     @EventHandler
     public void onChange(EntityTargetEvent e) {
         Player p = (Player) e.getTarget();
-        if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.UsePortal")){
+        if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.target")){
             if (p.hasPermission("license.full")){
                 e.setCancelled(false);
             }
