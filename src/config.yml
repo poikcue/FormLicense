@@ -14,9 +14,11 @@ FormLicense:
 PlayerNoLicenseAllow:
   pickup: true
   UsePortal: true
-  hit-others: true
+  hit: true
 Message:
   action-bar-message: "I'm sorry but you don't have license.Please type &a/license &fto check."
+  hit-action-bar-message: "You don't have license!Damage has been cancelled."
+  # If player hit or be hit,show at action-bar's message.
   no-license-player-join-message: "You don't have license.Some function locked."
   command-with-license: "You don't have license!"
   command-with-no-license: "You have license!"

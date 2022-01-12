@@ -5,9 +5,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import poikcue.form.license.command.command;
 import poikcue.form.license.command.reload;
-import poikcue.form.license.nolicense.ChangeWorld;
-import poikcue.form.license.nolicense.DamageOthers;
-import poikcue.form.license.nolicense.pickUp;
+import poikcue.form.license.nolicense.*;
 
 import java.util.Objects;
 
@@ -20,7 +18,9 @@ public class FormLicense extends JavaPlugin {
         pm.registerEvents(new pickUp(), this);
         pm.registerEvents(new PlayerJoinEvent(), this);
         pm.registerEvents(new ChangeWorld(), this);
-        pm.registerEvents(new DamageOthers(), this);
+        pm.registerEvents(new BeDamage(), this);
+        pm.registerEvents(new Damage(), this);
+        pm.registerEvents(new target(), this);
         saveDefaultConfig();
         if (Bukkit.getPluginCommand("license") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("license")).setExecutor(new command());
