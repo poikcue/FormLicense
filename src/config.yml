@@ -6,7 +6,7 @@
 FormLicense:
   HideDevelopmentVersionWarning: false
   # FormLicense development version warning
-  # When you download it on the build page jar file or compile by yourself if 'dont use' is marked on the commit page, please do not use it mmediately.
+  # This version is alpha,beta or development version.* NOT A OFFICIAL VERSION! *
   # This means that the version is untested or (possibly) still have bug.
   # If you modify the plugin and test it yourself, there should be no problem.
   # If you have any problems with the development version, please submit an issue in GitHub and stop using it immediately. The developer will not bear * any * responsibility for this.
@@ -22,7 +22,7 @@ Message:
     You don't have server LICENSE.
     Please type &a"/license" &fto check your all active license.
 
-  command-with-license: "&cYou don't have license!"
-  command-with-no-license: "&aOh yeah! You have license!"
-  reload-with-permission: "&eSuccessful reload!"
-  reload-with-no-permission: "&c You can't do this!"
+  command-with-license: "You don't have license!"
+  command-with-no-license: "You have license!"
+  reload-with-permission: "Successful reload!"
+  reload-with-no-permission: "You can't do this!"

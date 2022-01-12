@@ -21,7 +21,6 @@ public class ChangeWorld implements Listener {
             }
             else {
                 e.setCancelled(true);
-                p.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.action-bar-message")));
                 p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.action-bar-message"))));
             }
         }
