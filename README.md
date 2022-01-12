@@ -13,6 +13,7 @@ For some (such as survival) servers, they hope that players without a white list
 ## Apply 
 Minecraft(Spigot 1.13-1.18.1)
 *Only tested at 1.18 and work is perfect.But the api is Spigot-1.13,so i think it also worked between 1.13 and 1.18.*
+
 *If you tested at 1.14-1.17, please tell me the result :D*
 
 ## About Plugin
@@ -22,6 +23,7 @@ License: MIT
 
 ## Contact me
 mail: poikcue@outlook.com *or* moraplze@outlook.com
+
 spigot: GMs1D2Yy
 
 ## Compile
