@@ -1,0 +1,20 @@
+# FormLicense by poikcue.
+# Active Version: 1.13-1.18.1
+# Report bug: Send mail to poikcue@outlook.com
+# Version:1.3
+FormLicense:
+  version: 1.3-beta-2
+  onEnableMessage: Powered by poikcue.
+PlayerNoLicenseAllow:
+  pickup: true
+  UsePortal: true
+Message:
+  action-bar-message: I'm sorry but you don't have license.Please type "/license" to check.
+  no-license-player-join-message: |-
+    
+    I'm sorry,
+    You don't have server LICENSE.
+    Please type &a"/license" &fto check your all active license.
+
+  command-with-license: Badly,you don't have license!
+  command-with-no-license: Oh yeah! You have license!
