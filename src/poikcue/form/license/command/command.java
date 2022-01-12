@@ -6,22 +6,17 @@ import org.bukkit.command.CommandSender;
 import poikcue.form.license.FormLicense;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 
-import static net.md_5.bungee.api.ChatColor.translateAlternateColorCodes;
+import static net.md_5.bungee.api.ChatColor.*;
 
 public class command implements CommandExecutor {
     @Override
     @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
         if (!commandSender.hasPermission("license.full")) {
-            String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.command-with-license");
-            String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(coloredText);
+            commandSender.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.command-with-license")));
         } else {
-            String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.command-with-no-license");
-            String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(coloredText);
+            commandSender.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.command-with-no-license")));
         }
         return true;
     }

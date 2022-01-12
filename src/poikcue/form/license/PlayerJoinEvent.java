@@ -5,9 +5,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import java.util.Objects;
-
 import static net.md_5.bungee.api.ChatColor.translateAlternateColorCodes;
+
 
 public class PlayerJoinEvent implements Listener {
     @EventHandler
@@ -18,10 +17,7 @@ public class PlayerJoinEvent implements Listener {
         }
         else {
             p.setGameMode(GameMode.ADVENTURE);
-            p.sendMessage(Objects.requireNonNull(FormLicense.getInstance().getConfig().getString("Message.no-license-player-join-message")));
-            String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.no-license-player-join-message");
-            String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            p.sendMessage(FormLicense.getInstance().getConfig().getString(coloredText));
+            p.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.no-license-player-join-message")));
         }
         return false;
     }

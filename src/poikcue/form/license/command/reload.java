@@ -6,9 +6,8 @@ import org.bukkit.command.CommandSender;
 import poikcue.form.license.FormLicense;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Objects;
 
-import static net.md_5.bungee.api.ChatColor.translateAlternateColorCodes;
+import static net.md_5.bungee.api.ChatColor.*;
 
 public class reload implements CommandExecutor {
     @Override
@@ -16,16 +15,10 @@ public class reload implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
         if(commandSender.hasPermission("license.admin")){
             FormLicense.getInstance().reloadConfig();
-            String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.reload-with-permission");
-            assert nonColoredText != null;
-            String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(Objects.requireNonNull(coloredText));
+            commandSender.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.reload-with-permission")));
         }
         else{
-            String nonColoredText = FormLicense.getInstance().getConfig().getString("Message.reload-with-no-permission");
-            assert nonColoredText != null;
-            String coloredText = translateAlternateColorCodes('&', nonColoredText);
-            commandSender.sendMessage(Objects.requireNonNull(coloredText));
+            commandSender.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.reload-with-no-permission")));
         }
         return true;
     }

@@ -22,7 +22,7 @@ Message:
     You don't have server LICENSE.
     Please type &a"/license" &fto check your all active license.
 
-  command-with-license: &cYou don't have license!
-  command-with-no-license: &aOh yeah! You have license!
-  reload-with-permission: &eSuccessful reload!
-  reload-with-no-permission: &cYou can't do this!
+  command-with-license: &c You don't have license!
+  command-with-no-license: &a Oh yeah! You have license!
+  reload-with-permission: &e Successful reload!
+  reload-with-no-permission: &c You can't do this!
