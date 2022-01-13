@@ -2,7 +2,6 @@ package poikcue.form.license.nolicense;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,7 +10,7 @@ import poikcue.form.license.FormLicense;
 
 import static net.md_5.bungee.api.ChatColor.translateAlternateColorCodes;
 
-public class Damage implements Listener {
+public class BeHit implements Listener {
 
     @EventHandler
     public void onDamaged(EntityDamageEvent e) {
