@@ -22,6 +22,7 @@ public class FormLicense extends JavaPlugin {
         pm.registerEvents(new BeHit(), this);
         pm.registerEvents(new target(), this);
         saveDefaultConfig();
+        getConfig().options().copyDefaults(true);
         if (Bukkit.getPluginCommand("license") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("license")).setExecutor(new command());
         }

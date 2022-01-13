@@ -14,15 +14,15 @@ public class Hit implements Listener {
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {
-        if(e.getEntity() instanceof Player) {
+        if(e.getDamager() instanceof Player) {
             Player p = (Player) e.getDamager();
-            if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit.be-hit")){
+            if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit.hit")){
                 if (p.hasPermission("license.full")){
                     e.setCancelled(false);
                 }
                 else {
                     e.setCancelled(true);
-                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.hit-message.be-hit-action-bar-message"))));
+                    p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(translateAlternateColorCodes('&', FormLicense.getInstance().getConfig().getString("Message.hit-message.hit-action-bar-message"))));
                 }
             }
         }
