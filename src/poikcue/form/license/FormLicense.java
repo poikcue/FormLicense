@@ -3,6 +3,7 @@ package poikcue.form.license;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.spigotmc.Metrics;
 import poikcue.form.license.command.command;
 import poikcue.form.license.command.reload;
 import poikcue.form.license.nolicense.*;
@@ -29,7 +30,6 @@ public class FormLicense extends JavaPlugin {
         if (Bukkit.getPluginCommand("licensereload") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("licensereload")).setExecutor(new reload());
         }
-        /*
         if(!getConfig().getBoolean("FormLicense.HideDevelopmentVersionWarning")){
             getLogger().warning("-- FormLicense Development Version Warning --");
             getLogger().warning("This version is alpha,beta or development version.* NOT A OFFICIAL VERSION! *");
@@ -43,7 +43,7 @@ public class FormLicense extends JavaPlugin {
             getLogger().info("You are already in config.yml disables the development version prompt.");
             getLogger().info("This message is a reminder that you are using the development version.");
         }
-         */
+
     }
 
     public static FormLicense getInstance(){
