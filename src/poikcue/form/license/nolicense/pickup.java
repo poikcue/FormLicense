@@ -6,7 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import poikcue.form.license.FormLicense;
 
-public class pickUp implements Listener {
+public class pickup implements Listener {
     @EventHandler
     public void onPick(EntityPickupItemEvent e) {
         Player p = (Player) e.getEntity();

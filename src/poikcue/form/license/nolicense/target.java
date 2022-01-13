@@ -13,12 +13,7 @@ public class target implements Listener {
         if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.target")){
             if(e.getTarget() instanceof Player){
                 Player p = (Player) e.getTarget();
-                if (p.hasPermission("license.full")){
-                    e.setCancelled(false);
-                }
-                else {
-                    e.setCancelled(true);
-                }
+                e.setCancelled(!p.hasPermission("license.full"));
             }
         }
     }

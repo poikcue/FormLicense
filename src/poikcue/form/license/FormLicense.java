@@ -15,11 +15,11 @@ public class FormLicense extends JavaPlugin {
     public void onEnable() {
         instance = this;
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new pickUp(), this);
+        pm.registerEvents(new pickup(), this);
         pm.registerEvents(new PlayerJoinEvent(), this);
         pm.registerEvents(new ChangeWorld(), this);
-        pm.registerEvents(new BeDamage(), this);
-        pm.registerEvents(new Damage(), this);
+        pm.registerEvents(new Hit(), this);
+        pm.registerEvents(new BeHit(), this);
         pm.registerEvents(new target(), this);
         saveDefaultConfig();
         if (Bukkit.getPluginCommand("license") != null) {
