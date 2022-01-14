@@ -3,10 +3,10 @@ package poikcue.form.license;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.spigotmc.Metrics;
 import poikcue.form.license.command.command;
+import poikcue.form.license.command.fastback;
 import poikcue.form.license.command.reload;
-import poikcue.form.license.nolicense.*;
+import poikcue.form.license.withoutlicense.*;
 
 import java.util.Objects;
 
@@ -29,6 +29,9 @@ public class FormLicense extends JavaPlugin {
         }
         if (Bukkit.getPluginCommand("licensereload") != null) {
             Objects.requireNonNull(Bukkit.getPluginCommand("licensereload")).setExecutor(new reload());
+        }
+        if (Bukkit.getPluginCommand("fastback") != null) {
+            Objects.requireNonNull(Bukkit.getPluginCommand("fastback")).setExecutor(new fastback());
         }
         if(!getConfig().getBoolean("FormLicense.HideDevelopmentVersionWarning")){
             getLogger().warning("-- FormLicense Development Version Warning --");

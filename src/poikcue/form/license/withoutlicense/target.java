@@ -1,4 +1,4 @@
-package poikcue.form.license.nolicense;
+package poikcue.form.license.withoutlicense;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,7 +13,7 @@ public class target implements Listener {
         if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.target")){
             if(e.getTarget() instanceof Player){
                 Player p = (Player) e.getTarget();
-                e.setCancelled(!p.hasPermission("license.full"));
+                e.setCancelled(!p.hasPermission("license.full") && p.hasPermission("formlicense.user.weight.a"));
             }
         }
     }

@@ -1,4 +1,4 @@
-package poikcue.form.license.nolicense;
+package poikcue.form.license.withoutlicense;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -17,7 +17,7 @@ public class Hit implements Listener {
         if(e.getDamager() instanceof Player) {
             Player p = (Player) e.getDamager();
             if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.hit.hit")){
-                if (p.hasPermission("license.full")){
+                if (p.hasPermission("license.full") && p.hasPermission("formlicense.user.weight.a")){
                     e.setCancelled(false);
                 }
                 else {

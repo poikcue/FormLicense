@@ -12,8 +12,20 @@ public class PlayerJoinEvent implements Listener {
     @EventHandler
     public boolean onJoin(org.bukkit.event.player.PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if (p.hasPermission("license.full")) { //permission.
-            p.setGameMode(GameMode.SURVIVAL);
+        if (p.hasPermission("license.full") && p.hasPermission("formlicense.user.weight.a")) { //permission.
+            if(p.hasPlayedBefore()){
+                if(p.isOp()){
+                    if (p.getGameMode() == GameMode.ADVENTURE) {
+                        p.setGameMode(GameMode.SURVIVAL);
+                    }
+                }
+                else{
+                    p.setGameMode(GameMode.SURVIVAL);
+                }
+            }
+            else{
+                p.setGameMode(GameMode.SURVIVAL);
+            }
         }
         else {
             p.setGameMode(GameMode.ADVENTURE);

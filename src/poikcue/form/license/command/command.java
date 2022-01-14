@@ -13,7 +13,7 @@ public class command implements CommandExecutor {
     @Override
     @ParametersAreNonnullByDefault
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
-        if (!commandSender.hasPermission("license.full")) {
+        if (!commandSender.hasPermission("license.full") && !commandSender.hasPermission("formlicense.user.weight.a")) {
             commandSender.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.command-with-license")));
         } else {
             commandSender.sendMessage(translateAlternateColorCodes('&',FormLicense.getInstance().getConfig().getString("Message.command-with-no-license")));

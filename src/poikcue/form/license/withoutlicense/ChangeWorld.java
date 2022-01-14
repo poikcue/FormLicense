@@ -1,4 +1,4 @@
-package poikcue.form.license.nolicense;
+package poikcue.form.license.withoutlicense;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -16,7 +16,7 @@ public class ChangeWorld implements Listener {
     public void onChange(PlayerPortalEvent e) {
         Player p = e.getPlayer();
         if(FormLicense.getInstance().getConfig().getBoolean("PlayerNoLicenseAllow.UsePortal")){
-            if (p.hasPermission("license.full")){
+            if (p.hasPermission("license.full") && p.hasPermission("formlicense.user.weight.a")){
                 e.setCancelled(false);
             }
             else {
