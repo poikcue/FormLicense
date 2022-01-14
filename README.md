@@ -4,7 +4,7 @@ For some (such as survival) servers, they hope that players without a white list
 - Simple and lightweight enough
 - Most (existing functions) can be customized
 - Players without a license(permission) will be in adventure mode
-- *Player can't pick up and join portal*
+- *Player can't pick up, join portal, hit or be-hit and be-targetted*
 - Send information to players when they join
 - - If you want, players will not find all traces of FormLicense in the game.(More fully display your brand)
 - Plugin functions are constantly update and open-source
