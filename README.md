@@ -1,12 +1,16 @@
 # FormLicense
 For some (such as survival) servers, they hope that players without a white list can enjoy some unique content (such as sightseeing or features) of the server. If you are a server owner, you can choose formlicense to do this.
+**About Update:**
+I'm soooooorrrrrrryyyyyyyyyyy that I had a fever :(
+May not be able to update in the next few days.
+* *Sincere apology* *
 ## Feature
 - Simple and lightweight enough
 - Most (existing functions) can be customized
 - Players without a license(permission) will be in adventure mode
 - *Player without license can't do something.*
 - Send information to players when they join
-- - If you want, players will not find all traces of FormLicense in the game.(More fully display your brand)
+- If you want, players will not find all traces of FormLicense in the game.(More fully display your brand)
 - Plugin functions are constantly update and open-source
 - If you want to prevent unlicensed players from doing anything, you can request it on the issue page.
 
