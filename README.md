@@ -1,9 +1,6 @@
 # FormLicense
-For some (such as survival) servers, they hope that players without a white list can enjoy some unique content (such as sightseeing or features) of the server. If you are a server owner, you can choose formlicense to do this.  
-**About Update:**  
-I'm soooooorrrrrrryyyyyyyyyyy that I had a fever :(  
-May not be able to update in the next few days.  
---*Sincere apology*--  
+For some (such as survival) servers, they hope that players without a white list can enjoy some unique content (such as sightseeing or features) of the server. If you are a server owner, you can choose FormLicense to do this.  
+
 
 ## Feature
 - Simple and lightweight enough
